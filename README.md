@@ -7,15 +7,13 @@ This course provides a hands-on introduction to data analytics for business deci
 
 ## 🗂 Repository Structure
 
-business-analytics-2026-1/
-│
-├── syllabus/      # Course syllabus and schedule
-├── lectures/      # Class materials (slides, scripts, notebooks)
-├── datasets/      # Datasets used in class
-├── assignments/   # Workshops and assignments
-├── solutions/     # Solutions (if applicable)
-├── utils/         # Helper functions or scripts
-└── sops/          # Setup and download guides (R, RStudio, VS Code, GitHub)
+- `syllabus/`: Course syllabus and schedule
+- `lectures/`: Class materials (slides, scripts, notebooks)
+- `datasets/`: Datasets used in class
+- `assignments/`: Workshops and assignments
+- `solutions/`: Solutions (if applicable)
+- `utils/`: Helper functions or scripts
+-  `sops/`: Setup and download guides (R, RStudio, VS Code, GitHub)
 
 ## 🛠 Tools & Technologies
 
