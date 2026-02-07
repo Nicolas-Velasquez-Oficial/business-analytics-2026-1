@@ -2,7 +2,7 @@
 # Script: Análisis Exploratorio - Titanic Dataset
 # Autor: Juan Nicolás Velásquez Rey
 # Curso: Analítica de Datos
-# Fecha: 30 de julio de 2025
+# Fecha: 6 de Febrero de 2026
 # ------------------------------------------------------
 
 # 1. Establecer el directorio de trabajo (ajusta esta ruta)
