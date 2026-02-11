@@ -5,19 +5,16 @@
 # Fecha: 6 de Febrero de 2026
 # ------------------------------------------------------
 
-# 1. Establecer el directorio de trabajo (ajusta esta ruta)
+# 1. Esablecer el directorio de trabajo (ajusta esta ruta)
 #setwd("C:/Users/TuNombre/Documents/ClaseAnaliticaDatos")
-setwd("/Users/pdm/Library/CloudStorage/OneDrive-Universidaddelosandes/Catedra Javeriana/2025-3/lesson2")
+setwd("/Users/pdm/Library/CloudStorage/OneDrive-Universidaddelosandes/Catedra Javeriana/2025-3/less trust translationon2")
 getwd()  # Verifica que estás en el directorio correcto
 
 # 2. Cargar librerías
 install.packages("tidyverse")  # Descomenta si no tienes tidyverse
-
 library(tidyverse)
-
-# 3. Importar los datos
-titanic <- read_csv("titanic.csv")
-
+# 3. Importar los datos wait
+titanic <- read_csv("Lectures/02-tipos_de_datos_tidyverse/titanic.csv")
 # 4. Explorar la estructura de los datos
 glimpse(titanic)
 head(titanic)
@@ -28,7 +25,6 @@ head(titanic)
 # ------------------------------
 # 6. Transformaciones básicas
 # ------------------------------
-
 # Crear una nueva variable: grupo de edad
 titanic <- mutate(titanic, edad_grupo = if_else(Age < 18, "Menor", "Adulto"))
 
@@ -87,7 +83,7 @@ resumen_edad <- titanic |>
     promedio = mean(Age),
     desviacion = sd(Age)
   )
-
+View(resumen_edad)
 # Acceder al promedio de edad de mujeres
 resumen_edad |>
   filter(Sex == "female") |>
@@ -99,13 +95,14 @@ resumen_edad <- function(x) {
   data.frame(mediana = qs[1], minimo = qs[2], maximo = qs[3])
 }
 
+resumen_edad(titanic$Age)
 # Aplicar la función personalizada a mujeres
 titanic |>
   filter(Sex == "female") |>
   summarize(resumen_edad(Age))
 
 # Estadísticas por sexo
-reumen = titanic |>
+resumen = titanic |>
   filter(!is.na(Age)) |>
   group_by(Sex) |>
   summarize(
